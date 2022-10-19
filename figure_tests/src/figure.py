@@ -1,9 +1,8 @@
 class Figure:
     '''Общий класс для фигур'''
     def add_area(self, figure):
-        try:
+        if isinstance(figure, Figure):
             return self.area + figure.area
-        except Exception:
+        else:
             raise ValueError ('Не передана фигура')
-            
             
